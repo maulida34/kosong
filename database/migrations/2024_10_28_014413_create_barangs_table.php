@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('barang', function (Blueprint $table) {
             $table->id();
             $table->string('nama_barang');
-            $table->foreignId('id_kategori')->constrained('kategori_barang'); // Ini otomatis akan mengambil 'id' dari 'kategori_barang'
+            $table->foreignId('id_kategori')->constrained('kategori_barang'); 
             $table->text('spesifikasi')->nullable();
             $table->enum('kondisi', ['Baik', 'Rusak Ringan', 'Rusak Berat']);
             $table->date('tanggal_pengadaan');

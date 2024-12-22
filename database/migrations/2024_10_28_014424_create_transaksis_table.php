@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('transaksi', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_sekolah')->constrained('sekolah'); // Foreign key ke id pada tabel sekolah
-            $table->foreignId('id_barang')->constrained('barang'); // Foreign key ke id pada tabel barang
+            $table->foreignId('id_sekolah')->constrained('sekolah'); 
+            $table->foreignId('id_barang')->constrained('barang'); 
             $table->date('tanggal_transaksi');
             $table->integer('jumlah');
             $table->enum('jenis_transaksi', ['Distribusi', 'Pengembalian']);
